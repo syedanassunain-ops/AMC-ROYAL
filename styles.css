@@ -172,8 +172,8 @@ section {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #E6C07B 0%, #F0D99C 50%, #E6C07B 100%);
-    color: #0B1C2C;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary) 100%);
+    color: var(--bg-dark);
     padding: 18px 45px;
     font-size: 13px;
     font-weight: 700;
@@ -182,14 +182,14 @@ section {
     border: none;
     display: inline-block;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(230, 192, 123, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #F0D99C 0%, #E6C07B 50%, #C9A84C 100%);
-    color: #0B1C2C;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+    color: var(--bg-dark);
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(230, 192, 123, 0.5);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
 }
 
 .btn-outline {
@@ -228,7 +228,7 @@ section {
 
 .navbar.scrolled {
     padding: 15px 5%;
-    background: rgba(11, 28, 44, 0.95);
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -238,12 +238,12 @@ section {
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 5px;
-    background: linear-gradient(135deg, #F0D99C 0%, #E6C07B 50%, #C9A84C 100%);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 50%, var(--primary-dark) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: none;
-    filter: drop-shadow(0 0 10px rgba(230, 192, 123, 0.4));
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
 }
 
 nav a {
@@ -293,7 +293,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(11, 28, 44, 0.15) 0%, rgba(11, 28, 44, 0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
     z-index: 1;
 }
 
@@ -384,7 +384,7 @@ nav a:hover {
 /* Video Walkthrough Section */
 .video-walkthrough {
     padding: 160px 5%;
-    background: var(--bg-medium, #112840);
+    background: var(--bg-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,12 +430,12 @@ nav a:hover {
 
 /* Trust Strip */
 .trust-strip {
-    background: linear-gradient(135deg, #0e2236 0%, #112840 100%);
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
     padding: 50px 5%;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid rgba(230, 192, 123, 0.15);
-    border-bottom: 1px solid rgba(230, 192, 123, 0.15);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .trust-item {
@@ -706,7 +706,7 @@ nav a:hover {
 }
 
 .text-dark {
-    color: #0B1C2C;
+    color: #111111;
 }
 
 .features-grid {
@@ -719,7 +719,7 @@ nav a:hover {
 .feature-card {
     padding: 40px;
     background: white;
-    box-shadow: 0 10px 30px rgba(11, 28, 44, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     text-align: center;
     border-radius: 8px;
@@ -727,7 +727,7 @@ nav a:hover {
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(11, 28, 44, 0.12);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15);
 }
 
 .feature-card i {
@@ -742,13 +742,13 @@ nav a:hover {
 
 /* CTA Banner */
 .cta-banner {
-    background: linear-gradient(rgba(11, 28, 44, 0.9), rgba(11, 28, 44, 0.9)), url('assets/images/real_exterior.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/images/real_exterior.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     padding: 160px 5%;
-    border-top: 1px solid rgba(230, 192, 123, 0.15);
-    border-bottom: 1px solid rgba(230, 192, 123, 0.15);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .cta-banner h2 {
