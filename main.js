@@ -38,6 +38,24 @@ reveals.forEach((el) => {
     });
 });
 
+// Video Intersection Observer (Optimization)
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+            video.play().catch(() => {
+                // Autoplay might be blocked by browser until interaction
+            });
+        } else {
+            video.pause();
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('video').forEach(video => {
+    videoObserver.observe(video);
+});
+
 // Experience Image Parallax
 gsap.to(".exp-image img", {
     scrollTrigger: {
