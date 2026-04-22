@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC Royal Hegde Nagar | Luxury Wedding Venue in Bangalore</title>
+    <meta name="description"
+        content="Experience royal grandeur at AMC Royal Hegde Nagar. The ultimate luxury wedding venue in Bangalore for 2500+ guests. AC Hall, parking, and premium facilities.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">AMC ROYAL</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+            <a href="tel:+918749009617" class="btn-primary" style="padding: 10px 20px;">Call Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <video autoplay muted loop playsinline class="hero-video" id="mainVideo">
+            <source src="https://res.cloudinary.com/dc4c5hlgb/video/upload/v1776849160/hero-bg_vaoasz.mp4"
+                type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h5 class="reveal">AMC ROYAL HEGDE NAGAR</h5>
+            <h1 class="reveal">Where Luxury Meets <br><span class="gold-text">Celebration</span></h1>
+            <p class="reveal">Ultra-Luxury Wedding & Event Venue in Bangalore</p>
+            <div class="hero-btns reveal">
+                <a href="#contact" class="btn-primary">Check Availability</a>
+                <a href="https://wa.me/918749009617" class="btn-outline">WhatsApp Now</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>SCROLL</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-item">
+            <i class="fa-solid fa-users"></i>
+            <span>2500+ GUESTS</span>
+        </div>
+        <div class="trust-item">
+            <i class="fa-solid fa-snowflake"></i>
+            <span>GRAND AC HALL</span>
+        </div>
+        <div class="trust-item">
+            <i class="fa-solid fa-car"></i>
+            <span>AMPLE PARKING</span>
+        </div>
+        <div class="trust-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>PRIME LOCATION</span>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="about" class="experience">
+        <div class="container grid-2">
+            <div class="exp-text">
+                <h5 class="gold-text reveal">THE AMBIANCE</h5>
+                <h2 class="reveal">Experience Luxury <br>at its Finest</h2>
+                <p class="reveal">At AMC Royal Hegde Nagar, we believe your wedding day is more than just an event; it's
+                    the beginning of your royal legacy. Our grand architecture and opulent interiors provide the perfect
+                    stage for the most important story of your life.</p>
+                <div class="highlights reveal">
+                    <div class="highlight">
+                        <span class="gold-text">25,000+</span>
+                        <p>Sq. Ft. Luxury Space</p>
+                    </div>
+                    <div class="highlight">
+                        <span class="gold-text">500+</span>
+                        <p>Successful Weddings</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-primary reveal">Book a Visit</a>
+            </div>
+            <div class="exp-image reveal">
+                <div class="video-container"
+                    style="margin-top: 0; max-height: 500px; border-radius: 12px; overflow: hidden;">
+                    <video autoplay muted loop playsinline style="width: 100%; height: 500px; object-fit: cover;">
+                        <source
+                            src="https://res.cloudinary.com/dc4c5hlgb/video/upload/v1776849106/experience_zlwyoo.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Immersive Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="section-title text-center">
+            <h5 class="gold-text reveal">OUR MASTERPIECE</h5>
+            <h2 class="reveal">Visual Storytelling</h2>
+        </div>
+
+        <!-- Gallery Filters -->
+        <div class="gallery-filters container reveal">
+            <button class="filter-btn active" data-filter="all">All Photos</button>
+            <button class="filter-btn" data-filter="hall">Grand Hall</button>
+            <button class="filter-btn" data-filter="exterior">Palace Exterior</button>
+        </div>
+
+        <div class="gallery-grid container">
+            <!-- Exterior (Real) -->
+            <div class="gallery-item large reveal" data-category="exterior">
+                <img src="assets/images/real_exterior.png" alt="AMC Royal Palace Grounds">
+                <div class="item-overlay">
+                    <span>Palace Grounds (Real)</span>
+                </div>
+            </div>
+            <!-- Hall (Real) -->
+            <div class="gallery-item tall reveal" data-category="hall">
+                <img src="assets/images/real_hall.png" alt="Grand AC Hall">
+                <div class="item-overlay">
+                    <span>Grand AC Hall (Real)</span>
+                </div>
+            </div>
+            <!-- Entrance (Real) -->
+            <div class="gallery-item reveal" data-category="exterior" style="grid-column: span 1; grid-row: span 1;">
+                <img src="assets/images/real_entrance.png" alt="Main Gateway">
+                <div class="item-overlay">
+                    <span>Main Gateway (Real)</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-50 reveal">
+            <p class="gold-text">Discover more of our latest events on Instagram</p>
+            <a href="https://www.instagram.com/amcroyalhegdenagar/" target="_blank" class="btn-outline mt-20">View Our
+                Feed</a>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Gallery Image Full">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Why AMC Royal -->
+    <section class="why-us bg-light">
+        <div class="container text-center">
+            <h2 class="reveal text-dark">Why Choose AMC Royal?</h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <i class="fa-solid fa-crown gold-text"></i>
+                    <h3 class="text-dark">Royal Interiors</h3>
+                    <p class="text-dark">Hand-picked crystal chandeliers and white-and-gold marble finishes for a
+                        majestic feel.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fa-solid fa-lightbulb gold-text"></i>
+                    <h3 class="text-dark">Elegant Lighting</h3>
+                    <p class="text-dark">Smart lighting systems that change ambience to match your wedding film
+                        requirements.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fa-solid fa-shield-heart gold-text"></i>
+                    <h3 class="text-dark">Stress-Free</h3>
+                    <p class="text-dark">Everything from parking to air-conditioning is managed by our dedicated royal
+                        staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinematic Video Section -->
+    <section class="video-walkthrough">
+        <div class="container text-center">
+            <h5 class="gold-text reveal">THE GRAND TOUR</h5>
+            <h2 class="reveal">Moments at AMC Royal</h2>
+            <div class="video-container reveal" style="max-height: 500px; border-radius: 12px; overflow: hidden;">
+                <video autoplay muted loop playsinline style="width: 100%; height: 500px; object-fit: cover;">
+                    <source src="https://res.cloudinary.com/dc4c5hlgb/video/upload/v1776848638/ambience_dscjwj.mp4"
+                        type="video/mp4">
+                </video>
+            </div>
+            <a href="#contact" class="btn-primary reveal mt-50">Get Pricing</a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-banner">
+        <div class="container text-center">
+            <h2 class="reveal">Plan Your Dream Wedding Today</h2>
+            <p class="reveal">Limited dates available for 2026 - 2027 season. Book your site visit now.</p>
+            <div class="cta-actions reveal">
+                <a href="tel:+918749009617" class="btn-primary">Call Now</a>
+                <a href="https://wa.me/918749009617" class="btn-outline">WhatsApp Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container grid-2">
+            <div class="contact-info reveal">
+                <h2 class="gold-text">Visit Us</h2>
+                <p>Hegde Nagar Main Rd, Next to Haj Bhavan, Bangalore, Karnataka</p>
+                <p class="mt-20"><i class="fa-solid fa-phone gold-text"></i> <a
+                        href="tel:+918749009617">8749-00-9617</a></p>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1234567890!2d77.6254!3d13.0485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae176f57f49591%3A0xc3f8f17548c26c1e!2sAMC%20Royal%20Function%20Hall!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <form class="contact-form reveal" id="enquiryForm">
+                <h3>Check Availability</h3>
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <div class="input-group">
+                    <span class="input-prefix">+91</span>
+                    <input type="tel" id="userPhone" placeholder="Phone Number" required pattern="[0-9]{10}"
+                        maxlength="10" title="Please enter a 10-digit phone number">
+                </div>
+                <input type="date" id="eventDate" placeholder="Event Date">
+                <textarea id="eventDetails" placeholder="Tell us about your event"></textarea>
+                <button type="submit" class="btn-primary w-100">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">AMC ROYAL</div>
+                <p>Curating royal legacies through grand celebrations.</p>
+                <p class="mt-20"><i class="fa-solid fa-phone gold-text"></i> 8749-00-9617</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-links">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/amcroyalhegdenagar/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AMC Royal Hegde Nagar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/918749009617" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
