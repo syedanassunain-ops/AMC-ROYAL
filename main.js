@@ -11,43 +11,83 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Intro Sequence & Hero Animation
+// Cinematic Intro Sequence & Hero Animation
 window.addEventListener('load', () => {
-    const tl = gsap.timeline();
+    const mainVideo = document.getElementById('mainVideo');
+    const introLoader = document.getElementById('intro-loader');
+    let videoReady = false;
 
-    tl.to(".intro-text", {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power2.out",
-        delay: 0.5
-    })
-        .to(".intro-line", {
-            width: "100%",
-            duration: 1.5,
-            ease: "power1.inOut"
-        }, "-=0.5")
-        .to("#intro-loader", {
-            opacity: 0,
+    // Mark video as ready when it has buffered enough
+    if (mainVideo) {
+        const markReady = () => { videoReady = true; };
+        mainVideo.addEventListener('canplaythrough', markReady, { once: true });
+        // If already buffered (cached)
+        if (mainVideo.readyState >= 4) videoReady = true;
+    }
+
+    // Phase 1: Animate intro text in
+    const introTL = gsap.timeline();
+
+    introTL
+        .to(".intro-subtext", {
+            opacity: 1,
             duration: 1,
-            ease: "power2.inOut",
-            delay: 1.5, // Total read time ~3s
-            onComplete: () => {
-                document.getElementById('intro-loader').style.display = 'none';
-                // Start Video Playback
-                const mainVideo = document.getElementById('mainVideo');
-                if (mainVideo) {
-                    mainVideo.play().catch(e => console.log("Autoplay blocked:", e));
-                }
-            }
+            ease: "power2.out",
+            delay: 0.3
         })
-        .from(".hero-content .reveal", {
-            y: 60,
-            opacity: 0,
-            duration: 2,
-            stagger: 0.3,
-            ease: "power4.out"
-        }, "-=0.5");
+        .to(".intro-text", {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        }, "-=0.4")
+        .to(".intro-line", {
+            width: "80%",
+            duration: 1.8,
+            ease: "power1.inOut"
+        }, "-=0.6")
+        .add(() => {
+            // Phase 2: Wait until video is ready, then transition
+            const proceed = () => {
+                // Fade out intro
+                gsap.to(introLoader, {
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        introLoader.style.display = 'none';
+
+                        // Play video and fade it in smoothly
+                        if (mainVideo) {
+                            mainVideo.play().catch(() => { });
+                            mainVideo.style.opacity = '1';
+                        }
+
+                        // Phase 3: Reveal hero content
+                        gsap.from(".hero-content .reveal", {
+                            y: 50,
+                            opacity: 0,
+                            duration: 1.8,
+                            stagger: 0.25,
+                            ease: "power4.out",
+                            delay: 0.3
+                        });
+                    }
+                });
+            };
+
+            if (videoReady) {
+                // Video already buffered — go after a brief hold for readability
+                setTimeout(proceed, 1200);
+            } else {
+                // Wait for video, but max 4s safety timeout
+                const safetyTimeout = setTimeout(proceed, 4000);
+                mainVideo.addEventListener('canplaythrough', () => {
+                    clearTimeout(safetyTimeout);
+                    setTimeout(proceed, 600);
+                }, { once: true });
+            }
+        }, "+=0.5");
 });
 
 // Scroll Reveal Animations
@@ -81,7 +121,7 @@ const videoObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.2 });
 
-document.querySelectorAll('video').forEach(video => {
+document.querySelectorAll('video:not(#mainVideo)').forEach(video => {
     videoObserver.observe(video);
 });
 
