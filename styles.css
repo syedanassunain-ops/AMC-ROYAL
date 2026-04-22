@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap');
 
 :root {
-    --primary: #E6C07B;
-    /* Champagne Gold */
-    --primary-dark: #C9A84C;
-    --primary-light: #F0D99C;
-    --bg-dark: #0B1C2C;
-    /* Deep Navy */
-    --bg-medium: #112840;
+    --primary: #D4AF37;
+    /* Royal Gold */
+    --primary-dark: #B8860B;
+    --primary-light: #F1D38E;
+    --bg-dark: #0a0a0a;
+    /* Noble Black */
+    --bg-medium: #111111;
     --bg-light: #FAF9F6;
     /* Ivory Cream */
     --text-white: #ffffff;
-    --text-muted: #b8c8d8;
+    --text-muted: #c0c0c0;
     --transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    --glass: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(230, 192, 123, 0.2);
-    --gold-glow: 0 0 30px rgba(230, 192, 123, 0.3);
+    --glass: rgba(255, 255, 255, 0.07);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --gold-glow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
 /* Intro Loader */
