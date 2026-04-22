@@ -5,9 +5,9 @@
     /* Royal Gold */
     --primary-dark: #B8860B;
     --primary-light: #F1D38E;
-    --bg-dark: #0a0a0a;
-    /* Noble Black */
-    --bg-medium: #111111;
+    --bg-dark: #0f0f0f;
+    /* Rich Charcoal */
+    --bg-medium: #1a1a1a;
     --bg-light: #FAF9F6;
     /* Ivory Cream */
     --text-white: #ffffff;
@@ -168,7 +168,9 @@ section {
 /* Luxury Utilities */
 .gold-text {
     color: var(--primary);
-    text-shadow: 0 0 20px rgba(230, 192, 123, 0.3);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    font-size: 1.05em;
+    /* Slightly larger as requested */
 }
 
 .btn-primary {
@@ -284,8 +286,7 @@ nav a:hover {
     object-fit: cover;
     z-index: 0;
     background: var(--bg-dark);
-    filter: brightness(1.1) contrast(1.05);
-    /* Slightly reduced brightness for better text pop */
+    filter: brightness(1.15) contrast(1.1) saturate(1.1);
 }
 
 .overlay {
@@ -294,8 +295,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    /* Balanced overlay for readability */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
     z-index: 1;
 }
 
@@ -329,7 +329,7 @@ nav a:hover {
 .hero h1 {
     font-size: 80px;
     letter-spacing: -1px;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
