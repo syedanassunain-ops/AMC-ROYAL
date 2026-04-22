@@ -11,14 +11,43 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Hero Animation
-gsap.from(".hero-content .reveal", {
-    y: 60,
-    opacity: 0,
-    duration: 2,
-    stagger: 0.3,
-    ease: "power4.out",
-    delay: 0.5
+// Intro Sequence & Hero Animation
+window.addEventListener('load', () => {
+    const tl = gsap.timeline();
+
+    tl.to(".intro-text", {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        delay: 0.5
+    })
+        .to(".intro-line", {
+            width: "100%",
+            duration: 1.5,
+            ease: "power1.inOut"
+        }, "-=0.5")
+        .to("#intro-loader", {
+            opacity: 0,
+            duration: 1,
+            ease: "power2.inOut",
+            delay: 1.5, // Total read time ~3s
+            onComplete: () => {
+                document.getElementById('intro-loader').style.display = 'none';
+                // Start Video Playback
+                const mainVideo = document.getElementById('mainVideo');
+                if (mainVideo) {
+                    mainVideo.play().catch(e => console.log("Autoplay blocked:", e));
+                }
+            }
+        })
+        .from(".hero-content .reveal", {
+            y: 60,
+            opacity: 0,
+            duration: 2,
+            stagger: 0.3,
+            ease: "power4.out"
+        }, "-=0.5");
 });
 
 // Scroll Reveal Animations
