@@ -899,6 +899,104 @@ footer {
     transform: scale(1.1);
 }
 
+/* Services Section */
+.services {
+    background: var(--bg-dark);
+    padding: 100px 5%;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.amenity-card {
+    padding: 40px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.amenity-card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.amenity-card h3 {
+    font-size: 18px;
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.amenity-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: var(--gold-glow);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: #FAF9F6;
+    padding: 100px 5%;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--bg-dark);
+    margin-bottom: 30px;
+}
+
+.client-info strong {
+    display: block;
+    color: var(--bg-dark);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.client-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
 /* Animations Reveal Classes */
 .reveal {
     opacity: 0;
@@ -911,7 +1009,9 @@ footer {
     .grid-2,
     .features-grid,
     .gallery-grid,
-    .footer-grid {
+    .footer-grid,
+    .services-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
