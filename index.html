@@ -34,23 +34,14 @@
         <div class="header-cta">
             <a href="tel:+918749009617" class="btn-primary" style="padding: 10px 20px;">Call Now</a>
         </div>
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fa-solid fa-bars"></i>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="menu-close" id="menuClose">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="mobile-links">
-            <a href="#hero">Home</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#about">Experience</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
+
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -67,7 +58,7 @@
                 <span class="title-line animate-fade-up-1">Where Luxury Meets</span>
                 <span class="gold-text animate-fade-up-2">Celebration</span>
             </h1>
-            <p class="animate-fade-up-3">Ultra-Luxury Wedding & Event Venue in Bangalore</p>
+            <p class="animate-fade-up-3">Ultra-Luxury Wedding & Event Venue · Bangalore</p>
             <div class="hero-btns animate-fade-up-4">
                 <a href="#contact" class="btn-primary">Check Availability</a>
                 <a href="https://wa.me/918749009617" class="btn-outline">WhatsApp Now</a>
@@ -396,6 +387,15 @@
     <a href="https://wa.me/918749009617" class="whatsapp-float">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="closeMenu">✕</button>
+        <a href="#hero" onclick="closeMobileMenu()">Home</a>
+        <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+        <a href="#about" onclick="closeMobileMenu()">Experience</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+        <a href="tel:+918749009617" style="color:#D4AF37;font-size:20px;">Call: 8749-00-9617</a>
+    </div>
 
     <!-- Main JS -->
     <script src="main.js"></script>

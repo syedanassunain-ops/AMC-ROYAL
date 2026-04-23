@@ -1,28 +1,32 @@
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Mobile Menu Logic
-const menuToggle = document.getElementById('menuToggle');
-const menuClose = document.getElementById('menuClose');
+// Video Speed Logic
+const mainVideo = document.getElementById('mainVideo');
+if (mainVideo) {
+    mainVideo.playbackRate = 1.5;
+}
+
+// Mobile Menu Logic (Redo)
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const closeBtn = document.getElementById('closeMenu');
 const mobileMenu = document.getElementById('mobileMenu');
-const mobileLinks = document.querySelectorAll('.mobile-links a');
 
-const openMenu = () => {
-    mobileMenu.classList.add('open');
-    document.body.style.overflow = 'hidden';
-};
+if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function () {
+        mobileMenu.classList.add('open');
+    });
+}
 
-const closeMenu = () => {
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = 'auto';
-};
+if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+    });
+}
 
-if (menuToggle) menuToggle.addEventListener('click', openMenu);
-if (menuClose) menuClose.addEventListener('click', closeMenu);
-
-mobileLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
+function closeMobileMenu() {
+    if (mobileMenu) mobileMenu.classList.remove('open');
+}
 
 // Navbar Scroll Effect
 window.addEventListener('scroll', () => {
