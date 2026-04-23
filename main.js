@@ -8,12 +8,12 @@ const mobileMenu = document.getElementById('mobileMenu');
 const mobileLinks = document.querySelectorAll('.mobile-links a');
 
 const openMenu = () => {
-    mobileMenu.classList.add('active');
+    mobileMenu.classList.add('open');
     document.body.style.overflow = 'hidden';
 };
 
 const closeMenu = () => {
-    mobileMenu.classList.remove('active');
+    mobileMenu.classList.remove('open');
     document.body.style.overflow = 'auto';
 };
 
