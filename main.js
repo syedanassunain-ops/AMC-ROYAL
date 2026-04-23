@@ -1,6 +1,29 @@
 // Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+// Mobile Menu Logic
+const menuToggle = document.getElementById('menuToggle');
+const menuClose = document.getElementById('menuClose');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = document.querySelectorAll('.mobile-links a');
+
+const openMenu = () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+};
+
+const closeMenu = () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+};
+
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
 // Navbar Scroll Effect
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('.navbar');
@@ -246,7 +269,7 @@ if (enquiryForm) {
 }
 
 // Smooth Scroll for Nav Links
-document.querySelectorAll('nav a, .hero-btns a, .scroll-down').forEach(anchor => {
+document.querySelectorAll('nav a, .mobile-links a, .footer-links a, .hero-btns a, .scroll-down').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href.startsWith('#')) {
