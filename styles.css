@@ -18,66 +18,7 @@
     --gold-glow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
-/* Intro Loader */
-.intro-loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(ellipse at center, #111 0%, #0a0a0a 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10000;
-    overflow: hidden;
-}
 
-.intro-content-wrapper {
-    text-align: center;
-    max-width: 80%;
-}
-
-.intro-text {
-    font-size: 58px;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 3px;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.intro-subtext {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    color: var(--primary-light);
-    opacity: 0;
-    margin-bottom: 30px;
-}
-
-.intro-line {
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .intro-text {
-        font-size: 32px;
-        letter-spacing: 1px;
-    }
-
-    .intro-subtext {
-        font-size: 10px;
-        letter-spacing: 3px;
-    }
-}
 
 html,
 body,
@@ -454,8 +395,8 @@ nav a:hover {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 350px;
-    aspect-ratio: 9 / 16;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
     margin: 50px auto;
     border-radius: 12px;
     overflow: hidden;
