@@ -739,7 +739,7 @@ nav a:hover {
 
 /* CTA Banner */
 .cta-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/images/real_exterior.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/real_exterior.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
