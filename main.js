@@ -15,17 +15,22 @@ const mobileMenu = document.getElementById('mobileMenu');
 if (hamburgerBtn) {
     hamburgerBtn.addEventListener('click', function () {
         mobileMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
     });
 }
 
 if (closeBtn) {
     closeBtn.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
+        document.body.style.overflow = 'auto';
     });
 }
 
 function closeMobileMenu() {
-    if (mobileMenu) mobileMenu.classList.remove('open');
+    if (mobileMenu) {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = 'auto';
+    }
 }
 
 // Navbar Scroll Effect
