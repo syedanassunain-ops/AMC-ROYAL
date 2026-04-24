@@ -1015,6 +1015,17 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .gallery-grid {
+        grid-auto-rows: auto;
+        gap: 15px;
+    }
+
+    .gallery-item.large,
+    .gallery-item.tall {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
     .hero h1 {
         font-size: 50px;
     }
