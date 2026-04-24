@@ -1160,7 +1160,7 @@ footer {
     background: #0a0a0a;
     z-index: 2000;
     flex-direction: column;
-    padding: 30px 8%;
+    padding: 25px 8%;
     animation: slideDown 0.3s ease forwards;
 }
 
@@ -1184,31 +1184,31 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .close-mobile-nav {
     background: none;
     border: none;
     color: #D4AF37;
-    font-size: 32px;
+    font-size: 24px;
     cursor: pointer;
 }
 
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 20px;
 }
 
 .mobile-nav-links a {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
+    font-size: 22px;
     color: white;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 }
 
 .mobile-nav-links a:hover {
@@ -1217,22 +1217,22 @@ footer {
 
 .mobile-nav-call {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 16px !important;
+    font-size: 13px !important;
     color: #D4AF37 !important;
-    letter-spacing: 1px !important;
+    letter-spacing: 2px !important;
     border: 1px solid #D4AF37 !important;
-    padding: 15px 20px !important;
+    padding: 12px 15px !important;
     text-align: center;
     border-radius: 4px;
 }
 
 .mobile-nav-whatsapp {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 16px !important;
+    font-size: 13px !important;
     background: #25d366 !important;
     color: white !important;
-    letter-spacing: 1px !important;
-    padding: 15px 20px !important;
+    letter-spacing: 2px !important;
+    padding: 12px 15px !important;
     text-align: center;
     border-radius: 4px;
     border: none !important;
