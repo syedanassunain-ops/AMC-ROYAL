@@ -333,13 +333,15 @@ nav a:hover {
 
 .scroll-down {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0.6;
+    opacity: 1;
+    /* Pure visible */
+    z-index: 10;
 }
 
 .scroll-down span {
@@ -1108,19 +1110,20 @@ footer {
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
     z-index: 1100;
 }
 
 .hamburger span {
     display: block;
-    width: 25px;
-    height: 2px;
+    width: 28px;
+    height: 3px;
     background: #D4AF37;
+    border-radius: 2px;
 }
 
 .mobile-menu {
