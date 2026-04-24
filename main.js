@@ -7,30 +7,18 @@ if (mainVideo) {
     mainVideo.playbackRate = 1.5;
 }
 
-// Mobile Menu Logic (Redo)
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const closeBtn = document.getElementById('closeMenu');
-const mobileMenu = document.getElementById('mobileMenu');
+document.getElementById('hamburgerBtn').addEventListener('click', function () {
+    document.getElementById('mobileNav').classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
 
-if (hamburgerBtn) {
-    hamburgerBtn.addEventListener('click', function () {
-        mobileMenu.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    });
-}
+document.getElementById('closeMobileNav').addEventListener('click', function () {
+    closeNav();
+});
 
-if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = 'auto';
-    });
-}
-
-function closeMobileMenu() {
-    if (mobileMenu) {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = 'auto';
-    }
+function closeNav() {
+    document.getElementById('mobileNav').classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 // Navbar Scroll Effect

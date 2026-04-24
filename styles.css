@@ -1041,16 +1041,30 @@ footer {
     }
 
     .navbar {
-        background: rgba(10, 10, 10, 0.98);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--glass-border);
-        padding: 20px 5%;
+        padding: 15px 5%;
+        background: rgba(10, 10, 10, 0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .navbar nav,
-    .header-cta {
-        display: none;
+    .hero {
+        padding-top: 0;
+        margin-top: 0;
     }
+
+    .navbar nav {
+        display: none !important;
+    }
+
+    .header-cta {
+        display: none !important;
+    }
+
 
     .hamburger {
         display: flex;
@@ -1113,30 +1127,30 @@ footer {
     }
 }
 
-/* Mobile Menu Redo */
-.hamburger {
+.hamburger-icon {
     display: none;
-    width: 40px;
-    height: 40px;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
     gap: 6px;
-    background: transparent;
-    border: none;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 1200;
+    padding: 5px;
 }
 
-.hamburger span {
-    display: block;
-    width: 30px;
-    height: 3px;
+.hamburger-icon .bar {
+    width: 28px;
+    height: 2px;
     background: #D4AF37;
     border-radius: 2px;
+    transition: 0.3s;
 }
 
-.mobile-menu {
+@media (max-width: 991px) {
+    .hamburger-icon {
+        display: flex;
+    }
+}
+
+.mobile-nav-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -1144,59 +1158,82 @@ footer {
     width: 100%;
     height: 100vh;
     background: #0a0a0a;
-    z-index: 1050;
+    z-index: 2000;
     flex-direction: column;
+    padding: 30px 8%;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.mobile-nav-overlay.active {
+    display: flex;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-nav-top {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    margin-bottom: 60px;
 }
 
-.mobile-menu.open {
-    display: flex;
-}
-
-.mobile-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 15%;
-    gap: 30px;
-    width: 100%;
-}
-
-.mobile-menu a {
-    font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.enquire-btn-mobile {
-    margin-top: 20px;
-    padding: 15px 40px;
-    border: 2px solid var(--primary);
-    color: white;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: 18px !important;
-    text-align: center;
-}
-
-.mobile-menu a:hover {
-    color: #D4AF37;
-}
-
-.mobile-menu-close {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 36px;
-    color: white;
+.close-mobile-nav {
     background: none;
     border: none;
-    cursor: pointer;
     color: #D4AF37;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.mobile-nav-links a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    padding-bottom: 35px;
+}
+
+.mobile-nav-links a:hover {
+    color: #D4AF37;
+}
+
+.mobile-nav-call {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    color: #D4AF37 !important;
+    letter-spacing: 1px !important;
+    border: 1px solid #D4AF37 !important;
+    padding: 15px 20px !important;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.mobile-nav-whatsapp {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px !important;
+    background: #25d366 !important;
+    color: white !important;
+    letter-spacing: 1px !important;
+    padding: 15px 20px !important;
+    text-align: center;
+    border-radius: 4px;
+    border: none !important;
 }

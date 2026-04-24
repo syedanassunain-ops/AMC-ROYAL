@@ -34,11 +34,11 @@
         <div class="header-cta">
             <a href="tel:+918749009617" class="btn-primary" style="padding: 10px 20px;">Call Now</a>
         </div>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="hamburger-icon" id="hamburgerBtn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
 
@@ -388,16 +388,19 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-close" id="closeMenu">✕</button>
-        <div class="mobile-links">
-            <a href="#hero" onclick="closeMobileMenu()">Home</a>
-            <a href="#about" onclick="closeMobileMenu()">About</a>
-            <a href="#why-us" onclick="closeMobileMenu()">Services</a>
-            <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
-            <a href="#contact" onclick="closeMobileMenu()">Offers</a>
-            <a href="#contact" onclick="closeMobileMenu()" class="enquire-btn-mobile">ENQUIRE</a>
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-top">
+            <div class="logo">AMC ROYAL</div>
+            <button class="close-mobile-nav" id="closeMobileNav">✕</button>
         </div>
+        <nav class="mobile-nav-links">
+            <a href="#hero" onclick="closeNav()">Home</a>
+            <a href="#gallery" onclick="closeNav()">Gallery</a>
+            <a href="#about" onclick="closeNav()">Experience</a>
+            <a href="#contact" onclick="closeNav()">Contact</a>
+            <a href="tel:+918749009617" class="mobile-nav-call">📞 Call: 8749-00-9617</a>
+            <a href="https://wa.me/918749009617" class="mobile-nav-whatsapp">💬 WhatsApp Us</a>
+        </nav>
     </div>
 
     <!-- Main JS -->
