@@ -155,29 +155,9 @@ section {
     transform: translateY(-5px);
 }
 
-/* Promo Top Banner */
-.promo-banner {
-    background: var(--primary);
-    color: var(--bg-dark);
-    padding: 10px 5%;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 1001;
-}
-
-.promo-banner a {
-    color: var(--bg-dark);
-    text-decoration: underline;
-    margin-left: 10px;
-}
-
 /* Navbar */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -187,8 +167,6 @@ section {
     align-items: center;
     z-index: 1000;
     transition: var(--transition);
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled {
